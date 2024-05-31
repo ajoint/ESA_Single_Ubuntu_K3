@@ -38,8 +38,8 @@ kubectl apply -f examplepod.yaml
 ## Attach to example pod to use /mnt/esa
 
 ```bash
-kubectl get pods
-kubectl exec -it example-pod-name -- bash
+example_pod=`kubectl get pod -o yaml | grep name | head -1 | awk -F ':' '{print $2}'`
+kubectl exec -it ${example_pod} -- bash
 ```
 
 For help, visit https://learn.microsoft.com/en-us/azure/azure-arc/edge-storage-accelerator
