@@ -13,6 +13,9 @@ export STORAGECONTAINER="nameOfContainerInStorageAccount"
 ```
 
 ## Arc Connect Kubernetes
+```bash
+az connectedk8s connect -n ${ARCNAME} -l ${REGION} -g ${RESOURCE_GROUP} --subscription ${SUBSCRIPTION}
+```
 ## Install Open Service Mesh
 ```bash
 az k8s-extension create --resource-group ${RESOURCE_GROUP} --cluster-name ${ARCNAME} --cluster-type connectedClusters --extension-type Microsoft.openservicemesh --scope cluster --name osm
