@@ -22,7 +22,7 @@ az k8s-extension create --resource-group ${RESOURCE_GROUP} --cluster-name ${ARCN
 ```
 ## Install Edge Storage Accelerator
 ```bash
-az k8s-extension create --resource-group "${RESOURCE_GROUP}" --cluster-name "${ARCNAME}" --cluster-type connectedClusters --name esa --extension-type microsoft.edgestorageaccelerator
+az k8s-extension create --resource-group "${RESOURCE_GROUP}" --cluster-name "${ARCNAME}" --cluster-type connectedClusters --name esa --extension-type microsoft.edgestorageaccelerator --config-file config.json
 ```
 ## Configure ESA 
 For this example, the components are separate and applied separately, however you can chose to combine them into a single yaml to reduce the number of config files you have to maintain. 
